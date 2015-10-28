@@ -45,18 +45,20 @@ PROGRAM clover_leaf
 
   CALL clover_init_comms()
 
+
   IF(parallel%boss)THEN
-      WRITE(*,*)
-      WRITE(*,'(a15,f8.3)') 'Clover Version ',g_version
-      WRITE(*,'(a18)') 'MPI Version'
-      WRITE(*,'(a14,i6)') 'Task Count ',parallel%max_task !MPI
-      WRITE(*,*)
-      WRITE(0,*)
-      WRITE(0,'(a15,f8.3)') 'Clover Version ',g_version
-      WRITE(0,'(a18)') 'MPI Version'
-      WRITE(0,'(a14,i6)') 'Task Count ',parallel%max_task !MPI
-      WRITE(0,*)
+    WRITE(*,*)
+    WRITE(*,'(a15,f8.3)') 'Clover Version ',g_version
+    WRITE(*,'(a18)') 'MPI Version'
+    WRITE(*,'(a14,i6)') 'Task Count ',parallel%max_task !MPI
+    WRITE(*,*)
+    WRITE(0,*)
+    WRITE(0,'(a15,f8.3)') 'Clover Version ',g_version
+    WRITE(0,'(a18)') 'MPI Version'
+    WRITE(0,'(a14,i6)') 'Task Count ',parallel%max_task !MPI
+    WRITE(0,*)
   ENDIF
+
 
   CALL initialise
 
